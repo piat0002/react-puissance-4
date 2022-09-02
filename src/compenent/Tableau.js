@@ -49,11 +49,12 @@ const Tableau = ()=>{
                  {affichagecurrentplayer()}
             </div>
             <div>
+                <h2>
             {
                etatgame.victore ? `🎊${(etatgame.newCurrentPlayer  % 2 + 1) === 1 ? player1 : player2} won🎊` : ''
-            }
+            }</h2>
             </div>
-            <button onClick={()=>{reset()}}>restart </button>
+            <button class="restart" onClick={()=>{reset()}}>restart </button>
     </div>
 
 }
