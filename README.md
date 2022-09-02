@@ -2,7 +2,11 @@
 
 It's a connect 4 with react which uses the class that manages the game.
 
-## instalation
+## screenshot
+
+![Screenshot2](./screenshots/game.png)
+
+## installation
 
 ### `yarn install`
 
