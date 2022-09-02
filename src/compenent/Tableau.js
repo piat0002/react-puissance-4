@@ -3,7 +3,7 @@ import Game from '../core/Game.class';
 const Tableau = ()=>{
     const [game,setgame]= useState(new Game)
     const [etatgame,setetatgame]= useState({ newCurrentPlayer: 1, victore: false, matchNull: false })
-    const [player1,setplayer1] = useState("blue")
+    const [player1,setplayer1] = useState("red")
     const [player2,setplayer2] = useState('yellow')
     
     
@@ -18,7 +18,7 @@ const Tableau = ()=>{
 
     const affichagecurrentplayer = ()=>{
         if(!etatgame.victore){ 
-            return 'joueur ' + (etatgame.newCurrentPlayer === 1 ?  player1 : player2) 
+            return  (etatgame.newCurrentPlayer === 1 ?  player1 : player2) + ' turn'  
         } 
     } 
 
@@ -40,7 +40,7 @@ const Tableau = ()=>{
                         }
                         return (
                         <td>
-                            <button className="cell"  style={{backgroundColor:color}} onClick={()=>{clickPlay(index)}}>css</button>
+                            <button className="cell"  style={{backgroundColor:color}} onClick={()=>{clickPlay(index)}}></button>
                         </td>)})}
                     </tr>
                 ))}
@@ -50,10 +50,10 @@ const Tableau = ()=>{
             </div>
             <div>
             {
-               etatgame.victore ? `🎊victoire de ${(etatgame.newCurrentPlayer  % 2 + 1) === 1 ? player1 : player2}🎊` : ''
+               etatgame.victore ? `🎊${(etatgame.newCurrentPlayer  % 2 + 1) === 1 ? player1 : player2} won🎊` : ''
             }
             </div>
-            <button onClick={()=>{reset()}}>recommencer </button>
+            <button onClick={()=>{reset()}}>restart </button>
     </div>
 
 }
