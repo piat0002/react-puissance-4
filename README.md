@@ -1,12 +1,12 @@
-# connect 4 
+# Connect 4 
 
 It's a connect 4 with react which uses the class that manages the game.
 
-## screenshot
+## Screenshot
 
 ![Screenshot2](./screenshots/game.png)
 
-## installation
+## Installation
 
 ### `yarn install`
 
